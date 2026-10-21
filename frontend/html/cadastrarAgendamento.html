@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles_cad.css">
+    <script src="../js/cadastrar_agendamento.js" defer></script>
+    <title>Cadastrar Agendamento</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>&emsp;
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastrar Agendamento</h1><br>
+        <form>
+            <label for="data">Data:</label><br>
+            <input type="date" id="data"><br><br>
+
+            <label for="hora">Hora:</label><br>
+            <input type="time" id="hora"><br><br>
+
+            <label for="idCliente">Código do cliente:</label><br>
+            <input type="number" id="idCliente" min="1" step="1"><br><br>
+
+            <label for="idDrone">Código do Drone:</label><br>
+            <input type="number" id="idDrone" min="1" step="1"><br><br>
+
+           
+        </form>
+        <br><br>
+        <div id="resposta"></div>
+    </main>
+</body>
+</html>
+

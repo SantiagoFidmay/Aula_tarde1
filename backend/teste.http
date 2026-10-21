@@ -1,0 +1,78 @@
+### teste
+
+GET  http://localhost:3000/
+Content-Type: application/json
+
+### Testar cadastro do Cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+    "nome": "santiago",
+    "email": "santiago@gmail.com",
+    "senha": "abc",
+    "cpf": "12345678912",
+    "celular": "47999999999"
+}
+
+### Testar cadastro do Cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+    "nome": "roberto",
+    "email": "roberto@gmail.com",
+    "senha": "abc",
+    "cpf": "12345678912",
+    "celular": "47999999999"
+}
+
+### Testar cadastro do Cliente
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+    "nome": "matheus",
+    "email": "matheus@gmail.com",
+    "senha": "abc",
+    "cpf": "12345678912",
+    "celular": "47999999999"
+}
+
+
+### 5. Fazer Login do ciclista (Armazena o token automaticamente)
+# @name loginReq
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "santiago@gmail.com",
+    "senha": "abc"
+}
+
+### 6. Consultar cliente por ID (rota privada)
+GET http://localhost:3000/cliente/1
+Authorization: {{loginReq.response.body.token}}
+
+### 7. Listar cliente (rota privada)
+GET http://localhost:3000/clientes
+Authorization: {{loginReq.response.body.token}}
+
+### 8. apgar cliente (rota privada)
+DELETE http://localhost:3000/cliente/6
+Authorization: {{loginReq.response.body.token}}
+
+
+### 9. atualizar cliente
+PUT http://localhost:3000/cliente/7
+Authorization: {{loginReq.response.body.token}}
+
+{
+   "nome": "Gabriel",
+    "email": "Gabriel@gmail.com",
+    "senha": "abc",
+    "cpf": "12345678912",
+    "celular": "47999999999" 
+}
+
+
